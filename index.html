@@ -3,10 +3,51 @@
 
 <head>
   <base target="_top">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta author="SECUNDINO GARCIA (CQ)" year="2023">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <script src="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"></script>
+
+   
+  <!-- Datatables -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;700&display=swap" rel="stylesheet">
+  
+  <script type="text/javascript" src="settings.js"></script>
 </head>
 
-<body>
+<body class="container-fluid p-0">
+  <div class="card" id='waitSection' name='waitSection'>
+    <div class="card-body">
+      <h2 class="card-title">Bienvenido <?= parameters.name ?>!!</h2>
+      <p class="card-text">Espere un momento por favor...</p>
+    </div>
+  </div>
 
-<iframe src="https://script.google.com/macros/s/AKfycbyrKwhwL7etnmKtCx-FjTJtVHeM7C11LztWUWrLndjSwGnDdegfegHdTdTpujk22SAr7w/exec?name=Secundino Garcia&date=14-10-2022&legend=tu contratación!" frameBorder="0" style="width: 100%; height:100%; border: none;"></iframe>
+  <div class="container hidden p-0" id='mainSection' name="mainSection">
+    <h6><?= parameters.name ?>, Días transcurridos desde <?= parameters.legend ?>:</h6>
+    <div class="row">
+
+      <div class="col-md-12" id='info'>
+        Hello World
+      </div>
+      <canvas id="fireworks">Canvas is not supported in your browser.</canvas>
+
+    </div>
+  </div>
+
+
+
+  <?!= HtmlService.createHtmlOutputFromFile('_CssBase').getContent(); ?>
+  <?!= HtmlService.createHtmlOutputFromFile('_JsBase').getContent(); ?>
+  <?!= HtmlService.createHtmlOutputFromFile('_JsFireworks').getContent(); ?>
 </body>
+
 </html>
