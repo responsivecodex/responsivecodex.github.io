@@ -2,13 +2,6 @@
    * Once the document is ready, these actions will be performed
    */
   $(document).ready(function() {
-    google.script.run.withFailureHandler(onFailure).withSuccessHandler(onSuccess).getData();
-  });
-
-  /**
-   * Doing magic if getData() can be executed on the server
-   */ 
-  function onSuccess(xdata){
     const data = {
       name: _data.name,  //_data: variable creada en el index.html, mapeando los parametros de doGet()
       date: _data.date,
@@ -31,13 +24,6 @@
     wakeUp();
   }
   
-  /**
-   * If getData() cannot be executed on the server, a message is simply sent to the registry
-   */ 
-  function onFailure(){
-    $('#info').html( "Ey!, parece que no tengo datos tuyos..." );
-    wakeUp();
-  } 
 
   /**
    * When the main functions (OnSucess or OnFailure) finish, 
