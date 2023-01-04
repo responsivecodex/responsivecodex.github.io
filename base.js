@@ -22,7 +22,7 @@
     const months = elapsedDays - (years * 365);
     $('#info').html( elapsedDays );
     wakeUp();
-  }
+  });
   
 
   /**
