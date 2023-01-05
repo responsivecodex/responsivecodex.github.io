@@ -9,9 +9,9 @@
     };
 
     let elapsedDays = "- - -";
-    console.log("Todo va bien: " +  JSON.stringify( data ) );
+    console.log("Todo va bien: " +  JSON.stringify( _data ) );
     const aDate = data.date.split(/[-T/]/ig); //La fecha debe venir en formato dd-mm-yyyy
-    console.log("fecha" + aDate);
+    console.log("fecha: " + aDate);
 
     elapsedDays = daysMonthsYearsInDates( 
       formatDate(new Date( aDate[2], aDate[1]-1, aDate[0])), 
@@ -97,7 +97,7 @@
      if (cantMonths > 0) msg += ' y ';         
      msg += cantDays + ' día'+ ((cantDays > 1) ? 's':'');
     }
-    console.log(msg);
+    console.log("Tiempo transcurrido: " + msg);
     return msg;
   }
 
