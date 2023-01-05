@@ -9,7 +9,7 @@
     };
 
     let elapsedDays = "- - -";
-    console.log("Todo va bien: " +  data);
+    console.log("Todo va bien: " +  JSON.stringify( data ) );
     const aDate = data.date.split(/[-T/]/ig); //La fecha debe venir en formato dd-mm-yyyy
     console.log("fecha" + aDate);
 
