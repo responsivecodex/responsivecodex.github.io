@@ -20,6 +20,7 @@
 
     const years = Math.floor(elapsedDays / 365);
     const months = elapsedDays - (years * 365);
+    $('#mainSection h6').html( _data.name + ((_data.name.length > 0) ? ", ":"") + _data.legend);
     $('#info').html( elapsedDays );
     wakeUp();
   });
