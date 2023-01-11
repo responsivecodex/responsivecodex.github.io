@@ -40,7 +40,7 @@ function getDataParam() {
     //look for the parameter named 'data'  
     var found = false;
     for (var i in vals) {
-      _data[vals[i][0]] = vals[i][1];
+      _data[vals[i][0]] = decodeURI( vals[i][1] );
       found=true;
     }
     if (!found) { noParams(); }
