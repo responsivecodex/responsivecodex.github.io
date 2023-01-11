@@ -63,7 +63,7 @@ function parseDataValue(datavalue) {
 
     //Loop through vals and create rows for the table  
     for (var i in vals) {
-      _data[vals[i][0]] = vals[i][1];
+      _data[vals[i][0]] = decodeURI( vals[i][1] );
     }
 
   }
