@@ -21,7 +21,10 @@ $(document).ready(function () {
     formatDate(new Date())
   );
 
-  $('body').css('background','white url("'+_data.image+'") no-repeat fixed left top');
+  $('body').css('background-image','url("'+_data.image+'")');
+  $('body').css('background-position','left top');
+  $('body').css('background-repeat','no-repeat');
+  $('body').css('background-attachment','fixed');
   $('body').css('background-size','cover');
 
   $('#mainSection h6').html(data.name + ((data.name.length > 0) ? ", " : "") + data.legend);
