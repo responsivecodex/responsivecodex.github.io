@@ -7,11 +7,12 @@ $(document).ready(function () {
   const data = {
     name: _data.name,  //_data: variable creada en el index.html, mapeando los parametros de doGet()
     date: _data.date,
-    legend: _data.legend
+    legend: _data.legend,
+    image: _data.image
   };
 
   let elapsedDays = "- - -";
-  console.log("Todo va bien: " + JSON.stringify(_data));
+  console.log("Todo va bien: " + JSON.stringify(data));
   const aDate = data.date.split(/[-T/]/ig); //La fecha debe venir en formato dd-mm-yyyy
   console.log("fecha: " + aDate);
 
@@ -20,9 +21,10 @@ $(document).ready(function () {
     formatDate(new Date())
   );
 
-  const years = Math.floor(elapsedDays / 365);
-  const months = elapsedDays - (years * 365);
-  $('#mainSection h6').html(_data.name + ((_data.name.length > 0) ? ", " : "") + _data.legend);
+  $('body').css('background','lightblue url("'+_data.image+'") no-repeat fixed center');
+  $('body').css('background-size','contain');
+
+  $('#mainSection h6').html(data.name + ((data.name.length > 0) ? ", " : "") + data.legend);
   $('#clock').html(elapsedDays);
   wakeUp();
 });
@@ -31,6 +33,7 @@ function getDataParam() {
   var vals = new Array();
   if (location.search != "") {
     vals = location.search.substr(1).split("&");
+    console.log(vals);
     for (var i in vals) {
       vals[i] = vals[i].replace(/\+/g, " ").split("=");
     }

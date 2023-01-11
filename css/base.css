@@ -1,11 +1,13 @@
-html, body{
+html, body {
   font-family: 'Changa', sans-serif;
-  overflow: none;
+  overflow: auto;
   width: 100%;
   height: 100%;
-}  
+  margin: 0;
+  padding: 0;
+}
+ 
 #clock {
-  //font-family: 'alarm clock', sans-serif;
   color: green;
   font-size: 20pt;
 }
