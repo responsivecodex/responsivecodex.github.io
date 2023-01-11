@@ -5,8 +5,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
- 
+
 #clock {
   color: green;
   font-size: 20pt;
