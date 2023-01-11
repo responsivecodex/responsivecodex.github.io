@@ -22,7 +22,7 @@ $(document).ready(function () {
   );
 
   $('body').css('background','lightblue url("'+_data.image+'") no-repeat fixed center');
-  $('body').css('background-size','contain');
+  $('body').css('background-size','cover');
 
   $('#mainSection h6').html(data.name + ((data.name.length > 0) ? ", " : "") + data.legend);
   $('#clock').html(elapsedDays);

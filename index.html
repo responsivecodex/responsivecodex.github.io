@@ -27,7 +27,7 @@
   
 </head>
 
-<body class="container-fluid">
+<body class="container-fluid d-flex">
   <div class="card" id='waitSection' name='waitSection'>
     <div class="card-body">
       <h2 class="card-title">Bienvenido!!</h2>
@@ -35,14 +35,14 @@
     </div>
   </div>
 
-  <div class="container hidden p-0" id='mainSection' name="mainSection">
+  <div class="container hidden p-0 d-flex flex-column" id='mainSection' name="mainSection">
     <h6>Días transcurridos desde:</h6>
-    <div class="row">
+    <div class="d-flex flex-column">
 
-      <div class="col-md-12" id='clock'>
+      <div class="col-md-12 d-flex flex-row" id='clock'>
         Hello World
       </div>
-      <canvas id="fireworks">Canvas is not supported in your browser.</canvas>
+      <canvas id="fireworks" class="d-flex flex-fill">Canvas is not supported in your browser.</canvas>
 
     </div>
   </div>
