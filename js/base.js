@@ -8,7 +8,9 @@ $(document).ready(function () {
     name: _data.name,  //_data: variable creada en el index.html, mapeando los parametros de doGet()
     date: _data.date,
     legend: _data.legend,
-    image: _data.image
+    image: _data.image,
+    size: _data.size | 'contain',
+    position: _data.position | 'left top'
   };
 
   let elapsedDays = "- - -";
@@ -22,10 +24,10 @@ $(document).ready(function () {
   );
 
   $('body').css('background-image','url("'+_data.image+'")');
-  $('body').css('background-position','left top');
+  $('body').css('background-position',_data.position);
   $('body').css('background-repeat','no-repeat');
   $('body').css('background-attachment','fixed');
-  $('body').css('background-size','cover');
+  $('body').css('background-size', _data.size);
 
   $('#mainSection h6').html(data.name + ((data.name.length > 0) ? ", " : "") + data.legend);
   $('#clock').html(elapsedDays);
