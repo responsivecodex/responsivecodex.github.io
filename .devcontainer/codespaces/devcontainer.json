@@ -1,7 +1,7 @@
 {
 	"name": "ResponsiveCodex/alpine-nodejs",
     "build": {
-        "dockerfile": "Dockerfile",
+        "dockerfile": "Dockerfile"
     },
 	//"image": "responsivecodex/alpine-nodejs",
 	"forwardPorts": [
