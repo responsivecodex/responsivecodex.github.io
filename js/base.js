@@ -32,6 +32,9 @@ $(document).ready(function () {
   $('#mainSection h6').html(data.name + ((data.name.length > 0) ? ", " : "") + data.legend);
   $('#clock').html(elapsedDays);
   wakeUp();
+
+  const carousel = new bootstrap.Carousel('#myCarousel');
+
 });
 
 function getDataParam() {
